@@ -1,9 +1,7 @@
 # Note
 
-I haven't updated this package in a long time except merging PRs. The last time I was using this package was with PHP5.
-I archived the repository for the reason that I am no longer working with PHP (we all have to move on sometimes) and have no time to take proper care of it anymore.
-
-Feel free to read the code, to fork it or to use it in whatever way you want.
+This is a very early stage package that aims to become a successor of [chumper/zipper](https://github.com/Chumper/Zipper) package.
+It started as a fork because we needed Laravel 6+ compatibility. 
 
 # Zipper
 
@@ -13,18 +11,14 @@ This is a simple Wrapper around the ZipArchive methods with some handy functions
 
 ## Installation
 
-1. Add this package to the list of required packages, inside `composer.json`
-  * for Laravel 5: `"chumper/zipper": "1.0.x"`
-  * ~~for Laravel 4: `"chumper/zipper": "0.5.x"`~~
-2. Run `composer update`
+1. For Laravel 5.8 and 6: `"suzonraj/zipper": "1.0"` run `composer require suzonraj/zipper`
 
-3. Go to `app/config/app.php`
+2. Optionally go to `app/config/app.php`
 
   * add to providers `Chumper\Zipper\ZipperServiceProvider::class`
   * add to aliases `'Zipper' => Chumper\Zipper\Zipper::class`
 
 You can now access Zipper with the `Zipper` alias.
-
 ## Simple example
 ```php
 $files = glob('public/files/*');
